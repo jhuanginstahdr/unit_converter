@@ -13,5 +13,3 @@ unit types can be added without being aware of all other compatible units.
 
 Keep in mind that the code naming, organization, conventions, and the number of units implemented vary over different
 languages.
-
-Test update

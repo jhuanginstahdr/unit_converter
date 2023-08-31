@@ -5,6 +5,6 @@
 *.exe
 *.ilk
 *.pdb
-/unit_conversion/visual studio cpp/UnitConversion/x64/Debug
+*/x64/
 *.vs/
 *.idea/

@@ -1,0 +1,10 @@
+*bin
+*obj
+*.vscode
+*.pyc
+*.exe
+*.ilk
+*.pdb
+/unit_conversion/visual studio cpp/UnitConversion/x64/Debug
+*.vs/
+*.idea/

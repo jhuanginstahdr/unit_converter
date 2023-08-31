@@ -3,9 +3,9 @@
 
 #include <iostream>
 #include <memory>
-#include "interfaces.h"
+#include "Model/interfaces.h"
+#include "Model/value_with_unit.h"
 #include "length_units.h"
-#include "value_with_unit.h"
 #include "time_units.h"
 #include "rate_of_change.h"
 

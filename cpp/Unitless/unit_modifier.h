@@ -21,8 +21,8 @@ namespace unit_converter
     {
     public:
         static std::shared_ptr<unitary> create() { return std::shared_ptr<unitary>(new unitary()); }
-        string get_name() override { return ""; }
-        string get_symb() override { return ""; }
+        std::string get_name() override { return ""; }
+        std::string get_symb() override { return ""; }
         double from_base(double base) override { return base; }
         double to_base(double value) override { return value; }
     private:
@@ -36,8 +36,8 @@ namespace unit_converter
     {
     public:
         static std::shared_ptr<kilo> create() { return std::shared_ptr<kilo>(new kilo()); }
-        string get_name() override { return "kilo"; }
-        string get_symb() override { return "k"; }
+        std::string get_name() override { return "kilo"; }
+        std::string get_symb() override { return "k"; }
         double from_base(double base) override { return base / 1000.0; }
         double to_base(double value) override { return value * 1000.0; }
     private:

@@ -26,8 +26,8 @@ namespace unit_converter
             if (!mod_ptr) throw std::invalid_argument("mod_ptr cannot be nullptr");
             return std::shared_ptr<second>(new second(mod_ptr));
         }
-        string get_name() override { return mod->get_name() + "second"; }
-        string get_symb() override { return mod->get_symb() + "s"; }
+        std::string get_name() override { return mod->get_name() + "second"; }
+        std::string get_symb() override { return mod->get_symb() + "s"; }
         double from_base(double base) override { return base * mod->from_base(1.0); }
         double to_base(double value) override { return value * mod->to_base(1.0); }
     private:
@@ -48,8 +48,8 @@ namespace unit_converter
     {
     public:
         static std::shared_ptr<day> create() { return std::shared_ptr<day>(new day()); }
-        string get_name() override { return "day"; }
-        string get_symb() override { return "d"; }
+        std::string get_name() override { return "day"; }
+        std::string get_symb() override { return "d"; }
         double from_base(double base) override { return base / scalar; }
         double to_base(double value) override { return value * scalar; }
     private:

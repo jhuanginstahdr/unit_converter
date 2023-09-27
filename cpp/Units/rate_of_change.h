@@ -21,8 +21,8 @@ namespace unit_converter
             if (!quantity_type || !time_type) throw std::invalid_argument("quantity and time types cannot be nullptr");
             return std::shared_ptr<rate_of_change<T>>(new rate_of_change<T>(quantity_type, time_type));
         }
-        string get_name() override { return quantity->get_name() + " per " + time->get_name(); }
-        string get_symb() override { return quantity->get_symb() + "/" + time->get_symb(); }
+        std::string get_name() override { return quantity->get_name() + " per " + time->get_name(); }
+        std::string get_symb() override { return quantity->get_symb() + "/" + time->get_symb(); }
         double from_base(double base) override { return quantity->from_base(base) / time->from_base(1.0); }
         double to_base(double value) override { return quantity->to_base(value) / time->to_base(1.0); }
 

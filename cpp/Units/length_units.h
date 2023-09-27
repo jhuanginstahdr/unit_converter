@@ -26,8 +26,8 @@ namespace unit_converter
             if (!mod_ptr) throw std::invalid_argument("mod_ptr cannot be nullptr");
             return std::shared_ptr<metre>(new metre(mod_ptr));
         }
-        string get_name() override { return mod->get_name() + "metre"; }
-        string get_symb() override { return mod->get_symb() + "m"; }
+        std::string get_name() override { return mod->get_name() + "metre"; }
+        std::string get_symb() override { return mod->get_symb() + "m"; }
         double from_base(double base) override { return base * mod->from_base(1.0); }
         double to_base(double value) override { return value * mod->to_base(1.0); }
     private:
@@ -48,8 +48,8 @@ namespace unit_converter
     {
     public:
         static std::shared_ptr<foot> create() { return std::shared_ptr<foot>(new foot()); }
-        string get_name() override { return "foot"; }
-        string get_symb() override { return "ft"; }
+        std::string get_name() override { return "foot"; }
+        std::string get_symb() override { return "ft"; }
         double from_base(double base) override { return base / 0.3048; }
         double to_base(double value) override { return value * 0.3048; }
     private:

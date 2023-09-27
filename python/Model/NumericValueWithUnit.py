@@ -32,9 +32,6 @@ class NumericValueWithUnit:
         # make sure the units for conversion are of the same type
         if not issubclass(type(to), self._unit_type):
             raise TypeError(f"Cannot convert from {type(to)} to {self._unit_type}")
-        if isinstance(self._unit, type(to)):
-            # No conversion required
-            return self._value
 
         self._value = to.FromBase(self._unit.ToBase(self._value))
         self._unit = to

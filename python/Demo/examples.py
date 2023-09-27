@@ -2,9 +2,15 @@ from Units.LengthUnits import Metre, Foot
 from Unitless.Scalars import Kilo
 from Model.NumericUnitTypes import LengthUnit, TimeUnit
 from Model.NumericValueWithUnit import NumericValueWithUnit    
-from logging import info, error
+from logging import info, error, basicConfig
 
 def Examples() -> None:
+    import logging
+    basicConfig(level=logging.INFO)
+
+    def verbose_conversion(value, unit):
+        info(f'Convert from {value.Value} {value.Unit.Symbol} to {value.Convert(unit)} {unit.Symbol}')
+
     #scalar modifiers
     kilo = Kilo()
 
@@ -14,9 +20,9 @@ def Examples() -> None:
     foot = Foot()
 
     value = NumericValueWithUnit(10,metre,LengthUnit)
-    info(value.Convert(kilometre))
-    info(value.Convert(foot))
-    info(value.Convert(metre))
+    verbose_conversion(value, kilometre)
+    verbose_conversion(value, foot)
+    verbose_conversion(value, metre)
 
     # error should be raised because metre is not a TimeUnit
     try:

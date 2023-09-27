@@ -5,9 +5,9 @@
 #include <memory>
 #include "Model/interfaces.h"
 #include "Model/value_with_unit.h"
-#include "length_units.h"
-#include "time_units.h"
-#include "rate_of_change.h"
+#include "Units/length_units.h"
+#include "Units/time_units.h"
+#include "Units/rate_of_change.h"
 
 using namespace unit_converter;
 

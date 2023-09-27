@@ -1,19 +1,7 @@
-import os
-import sys
-
-cur_dir = os.path.dirname(os.path.abspath(__file__))
-type_dir = os.path.join(cur_dir, 'Model')
-units_dir = os.path.join(cur_dir, 'Units')
-unitless_dir = os.path.join(cur_dir, 'Unitless')
-
-# Add the path of the directory containing the file you want to import
-sys.path.append(units_dir)
-sys.path.append(unitless_dir)
-
-from LengthUnits import Metre, Foot
-from Scalars import Kilo
-from NumericUnitTypes import LengthUnit, TimeUnit
-from NumericValueWithUnit import NumericValueWithUnit
+from Units.LengthUnits import Metre, Foot
+from Unitless.Scalars import Kilo
+from Model.NumericUnitTypes import LengthUnit, TimeUnit
+from Model.NumericValueWithUnit import NumericValueWithUnit
 
 if __name__ == "__main__":
     #scalar modifiers

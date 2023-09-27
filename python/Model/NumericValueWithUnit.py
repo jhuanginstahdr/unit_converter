@@ -1,17 +1,7 @@
-import os
-import sys
-
-cur_dir = os.path.dirname(os.path.abspath(__file__))
-rel_dir = os.path.join(cur_dir, 'Model')
-
-# Add the path of the directory containing the file you want to import
-sys.path.append(rel_dir)
-
-from Interfaces import ConvertToBase, ConvertFromBase
-
+from .Interfaces import ConvertToBase, ConvertFromBase
 from typing import TypeVar, Union
 
-# TypeVar representing the type of the unit (similar to generic type T)
+# A hint for T to be the type or subtype of ConvertToBase or ConvertFromBase
 T = TypeVar('T', bound=Union[ConvertToBase, ConvertFromBase])
 
 """

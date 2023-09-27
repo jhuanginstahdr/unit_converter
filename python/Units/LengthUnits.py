@@ -1,17 +1,6 @@
-import os
-import sys
-
-cur_dir = os.path.dirname(os.path.abspath(__file__))
-mod_dir = os.path.join(cur_dir, '..\\Model')
-uni_dir = os.path.join(cur_dir, '..\\Unitless')
-
-# Add the path of the directory containing the file you want to import
-sys.path.append(mod_dir)
-sys.path.append(uni_dir)
-
-from Interfaces import NumericUnitModifier
-from NumericUnitTypes import LengthUnit
-from Scalars import Unitary
+from Model.Interfaces import NumericUnitModifier
+from Model.NumericUnitTypes import LengthUnit
+from Unitless.Scalars import Unitary
 
 """
 Definition of unit 'Metre'

@@ -1,4 +1,4 @@
-from Interfaces import ConvertToBase,ConvertFromBase
+from .Interfaces import ConvertToBase,ConvertFromBase
 
 """
 Defines base class for length units
